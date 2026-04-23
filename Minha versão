@@ -1,0 +1,150 @@
+Código que eu fiz, diferente do do professor (acabei fazendo com uma amiga algo totalmente diferente).
+
+# HTML (eu):
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf=8">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <aside>
+        <img src="https://dividers.crd.co/assets/images/gallery08/9f188939.png?v=05d33f91" id="cuteside" alt="plants">
+
+        <img src="https://i.pinimg.com/1200x/fd/d7/f9/fdd7f9416c143bdd47b8ca26454e1d29.jpg"
+            alt="Delilah F. Neumann from Guilty Gear Strive" id="Delilah">
+
+        <article id="bio">
+            <h5>Who am I / Quem sou eu?</h5>
+            <p>I am but an average joe between many students—I merely enjoy studying and learning new things.</p>
+            <p>I enjoy a wide variety of games, mainly Guilty Gear, Ace Attorney, and Rain World!</p>
+            <p>I am an avid Bedman fan :3</p>
+
+            <p>Eu sou apenas uma pessoa comum entre várias outras—Eu simplesmente gosto de aprender coisas novas.</p>
+            <p>Eu gosto de uma grande variedade de coisas, mas no momento é principalmente Guilty Gear, Ace Attorney, e Rain World!</p>
+            <p>Eu sou uma fã gigantesca do Bedman :3</p>
+        </article>
+
+        <article id="ships">
+            <h5>Relationship with informatics/Relação com informática</h5>
+            <p>I am not fond of this subject. Not to say I hate it, I am simply apathetic towards it.</p>
+            <p>Eu não sou fã de informática. Não significa que eu a odeio, eu apenas não sinto nada pela causa.</p>
+        </article>
+    </aside>
+
+    <main>
+
+        <h1>More abt me!</h1>
+
+        <section>
+            <div>
+                My fav games
+                <div class="gal">
+                    <img alt="Guilty Gear Strive"
+                        src="https://i.pinimg.com/1200x/a5/f6/06/a5f606d24f7a30554428da21a34ad7b4.jpg">
+                    <img alt="Guilty Gear XRD"
+                        src="https://i.pinimg.com/1200x/52/fa/80/52fa80e044dfb82b13b4c689b5859ea6.jpg">
+                    <img alt="Rain World"
+                        src="https://i.pinimg.com/1200x/c4/65/4f/c4654f3a9ae49483de2fcebc053fce91.jpg">
+                    <img alt="Ace Attorney: Trilogy"
+                        src="https://i.pinimg.com/1200x/98/16/d7/9816d7f2661758c63b67e4a8f9738052.jpg">
+                </div>
+                Guilty Gear Strive, Guilty Gear XRD, Rain World, e Ace Attorney; em ordem.
+            </div>
+
+            <div>
+                My fav Characters
+                <div class="gal">
+                    <img alt="Bedman, XRD" src="https://i.pinimg.com/1200x/c0/f0/cd/c0f0cddb0544be199c63650f2784521a.jpg">
+                    <img alt="Miles" src="https://i.pinimg.com/1200x/a5/59/76/a559769b9a9a70043939c984c18839e0.jpg">
+                    <img alt="Saint" src="https://i.pinimg.com/1200x/10/51/e3/1051e3c51003589e8973f8217fb86f6f.jpg">
+                </div>
+                Bedman (GG XRD), Miles Edgeworth (Ace Attorney), e Saint (Rain World); em ordem.
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
+
+# CSS (eu):
+
+/* find a way to put pixchicago in this b. !!!!
+    more info abt myself: find something extra. 
+    more decor!!! lace, romeo chibi, etc.*/
+
+body {
+    background-color: rgb(235, 250, 230);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+aside {
+    width: 25%;
+    padding-left: 70px;
+    margin-left: 0%;
+    float: left;
+    background-color: rgb(208, 244, 191);
+
+}
+
+#cuteside {
+    transform: rotate(90deg) scaleY(-1);
+    transform-origin: 0 0;
+    position: absolute;
+    left: -10px;
+
+}
+
+#Delilah {
+    border: 2px solid #91cc98;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+main {
+    float: right;
+    margin-left: 25px;
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 5%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 2rem;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+
+        >.gal {
+            display: grid;
+            grid-template-columns: 0.4fr 0.4fr;
+            grid-template-rows: 0.4fr 0.4fr;
+            gap: 1rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
